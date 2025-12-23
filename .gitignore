@@ -1,0 +1,48 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Model files yang tidak digunakan
+models/cnn_classic_best.h5
+
+# History files yang tidak digunakan
+history/cnn_classic_history.npy
+history/cnn_lora_history.npy
+
+# Dataset (tidak digunakan di dashboard)
+dataset/
+
+# EDA files (tidak digunakan di dashboard)
+eda/
+
+# Test predictions CSV (tidak ditampilkan)
+test_results/test_predictions.csv
+
+# Windows batch file
+run_dashboard.bat
+
+# Dokumentasi lokal
+PERUBAHAN.md
+QUICKSTART.md
+README_LOKAL.md
+
+# Temporary files
+*.tmp
+*.bak
+*.swp

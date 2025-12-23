@@ -1,0 +1,12 @@
+Test Loss: 0.6990
+Test Accuracy: 0.7059
+
+              precision    recall  f1-score   support
+
+    INDOLOGO     0.8980    0.6667    0.7652        66
+   INTERLOGO     0.6364    0.8750    0.7368        16
+     NOHALAL     0.4516    0.7000    0.5490        20
+
+    accuracy                         0.7059       102
+   macro avg     0.6620    0.7472    0.6837       102
+weighted avg     0.7694    0.7059    0.7184       102
