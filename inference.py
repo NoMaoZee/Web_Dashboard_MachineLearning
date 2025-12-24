@@ -39,6 +39,8 @@ def predict_image(model, pil_image, class_names, target_size=(128, 128)):
     img_array = preprocess_image(pil_image, target_size)
     preds = model.predict(img_array, verbose=0)[0]
     pred_idx = np.argmax(preds)
+    # Convert NumPy int64 to Python int for compatibility
+    pred_idx = int(pred_idx)
     pred_label = class_names[pred_idx]
     pred_conf = preds[pred_idx]
     return pred_label, pred_conf, preds
@@ -93,7 +95,9 @@ def predict_with_gradcam(model, pil_image, class_names, last_conv_layer="conv3_1
     """Prediksi + Grad-CAM sekaligus."""
     img_array = preprocess_image(pil_image, target_size)
     preds = model.predict(img_array, verbose=0)[0]
-    pred_idx = np. argmax(preds)
+    pred_idx = np.argmax(preds)
+    # Convert NumPy int64 to Python int for compatibility
+    pred_idx = int(pred_idx)
     pred_label = class_names[pred_idx]
     pred_conf = preds[pred_idx]
     
