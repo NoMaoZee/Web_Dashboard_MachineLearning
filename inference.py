@@ -63,6 +63,8 @@ def make_gradcam_heatmap(img_array, model, last_conv_layer_name, pred_index=None
         conv_outputs, predictions = grad_model(img_array)
         if pred_index is None:
             pred_index = tf.argmax(predictions[0])
+        # Convert pred_index to Python int for proper indexing
+        pred_index = int(pred_index.numpy()) if hasattr(pred_index, 'numpy') else int(pred_index)
         class_channel = predictions[:, pred_index]
     
     grads = tape.gradient(class_channel, conv_outputs)
